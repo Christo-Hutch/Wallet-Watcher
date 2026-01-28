@@ -1,2 +1,2 @@
 # Ignore class files
-Main.class
+*.class
