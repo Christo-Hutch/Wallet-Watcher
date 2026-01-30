@@ -2,8 +2,31 @@
 > For Wallet-Watcher Project.
 
 ## Structure of App
+### File Organisation
 
+```
+src/com/walletwatcher
+│
+├── core/
+│   ├── domain/
+│   └── ports/
+│
+├── infrastructure/
+│   ├── ui/
+│   ├── persistence/
+│   │   ├── database/
+│   │   └── config/
+│   │
+│   └── external/
+│       └── config/
+│
+└── Main.java
+```
+
+### Design
 <ul>
+  <li>Standalone desktop application
+  <ul><li>No online features excluding connections to investment APIs</ul></li>
   <li>
     Hexagonal Architecture
     <ul>
@@ -11,11 +34,16 @@
       <li>Allows for improved maintainability</li>
     </ul>
   </li>
+  <li>
+    Persistent Data
+    <ul>
+      <li>Application data (accounts, transactions) will be saved persistently through an SQL Database</li>
+      <li>User settings and other data items with a finite number of possible values will be saved to a JSON files</li>
+    </ul>
+  </li>
 </ul>
 
-
-
-## Features of App 
+### Features of App 
 > In order of implementation
 <ul>
   <li>
