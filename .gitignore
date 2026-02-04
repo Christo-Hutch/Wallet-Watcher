@@ -1,2 +1,11 @@
 # Ignore all class files
 *.class
+
+# Ignore all db files
+*.db
+
+# Ignore Main.java file (until testing)
+Main.java
+
+# Ignore vscode JSON settings file
+settings.json
